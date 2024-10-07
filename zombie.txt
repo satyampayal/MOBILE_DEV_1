@@ -1,0 +1,14 @@
+npx create-expo-app client --template blank
+cd client
+npx expo install react-dom react-native-web @expo/metro-runtime
+
+// for build 
+npm install --global eas-cli 
+ eas init --id 7e471099-f9c0-4e5c-8607-200d1022a519
+  "preview": {
+      "distribution": "internal",
+      "android":{
+        "buildType":"apk"
+      }
+    },
+eas build -p android --profile preview
